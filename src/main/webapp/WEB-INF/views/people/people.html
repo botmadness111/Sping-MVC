@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ph="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>people</title>
+</head>
+<body>
+
+<p>All people is here</p>
+<div th:each="person : ${people}">
+    <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
+
+</div>
+
+<br/>
+<hr/>
+
+<a href="/spring_mvc_app1_war_exploded/people/new">Create new person</a>
+
+</body>
+</html>
